@@ -6,8 +6,7 @@ target 'Todo' do
   use_frameworks!
 
   # Pods for Todo
-  pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
-
+  
   target 'TodoTests' do
     inherit! :search_paths
     # Pods for testing

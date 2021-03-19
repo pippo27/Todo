@@ -26,7 +26,7 @@ class Service {
     
     // MARK: Auth
     
-    func register(name: String, age: Int, email: String, password: String, completion: @escaping(ApiResult<AuthData>) -> ()) {
+    func register(name: String, age: String, email: String, password: String, completion: @escaping(ApiResult<AuthData>) -> ()) {
         let parameters: Parameters = [
             "name": name,
             "age": age,
@@ -73,7 +73,7 @@ class Service {
     }
     
     func logout(completion: @escaping(ApiResult<Any>) -> ()) {
-        httpClient.request(Service.LOGIN_API, method: .post) { result in
+        httpClient.request(Service.LOGOUT_API, method: .post) { result in
             switch result {
             case .success:
                 completion(.success(nil))

@@ -7,19 +7,19 @@
 
 
 struct User: Codable {
-    let id: Int
+    let id: String
     let name: String
     let age: Int
     let email: String
-    let createAt: String
-    let updateAt: String
+    let createdAt: String
+    let updatedAt: String
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case name
         case age
         case email
-        case createAt
-        case updateAt
+        case createdAt
+        case updatedAt
     }
 }

@@ -17,6 +17,7 @@ class AuthorizationManager {
         set {
             guard let value = newValue else {
                 clearUser()
+                clearToken()
                 return
             }
             
@@ -36,6 +37,7 @@ class AuthorizationManager {
     var token: String? {
         set {
             guard let value = newValue else {
+                clearUser()
                 clearToken()
                 return
             }

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FormRegisterCell" id="DQq-W0-i3Q" userLabel="Form Register Collection View Cell" customClass="FormRegisterCollectionViewCell" customModule="Todo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMu-MX-lmd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-rT-BVS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Rj-nF-kak">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="khl-x4-nPi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F7Q-8N-Th1">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="Kyp-5c-g9K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgx-gA-lib">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="1tY-va-2jo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8B-MQ-aaa">
+                                        <rect key="frame" x="0.0" y="192" width="375" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="mq0-yz-IFN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ2-1n-VYb">
+                                <rect key="frame" x="20" y="300" width="335" height="44"/>
+                                <color key="backgroundColor" name="Button Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RyA-gq-zhD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="REGISTER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="DQq-W0-i3Q" eventType="touchUpInside" id="rGi-nu-29U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eDa-rT-BVS" secondAttribute="bottom" id="0By-70-V9z"/>
+                            <constraint firstItem="mQ2-1n-VYb" firstAttribute="leading" secondItem="aMu-MX-lmd" secondAttribute="leading" constant="20" id="796-6s-r8O"/>
+                            <constraint firstAttribute="trailing" secondItem="mQ2-1n-VYb" secondAttribute="trailing" constant="20" id="LDn-YC-a6j"/>
+                            <constraint firstAttribute="trailing" secondItem="eDa-rT-BVS" secondAttribute="trailing" id="R3o-lf-ym2"/>
+                            <constraint firstItem="eDa-rT-BVS" firstAttribute="top" secondItem="aMu-MX-lmd" secondAttribute="top" id="XVb-K1-bfK"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mQ2-1n-VYb" secondAttribute="bottom" constant="20" id="iSY-UO-ojW"/>
+                            <constraint firstItem="eDa-rT-BVS" firstAttribute="leading" secondItem="aMu-MX-lmd" secondAttribute="leading" id="lkF-K0-eda"/>
+                            <constraint firstItem="mQ2-1n-VYb" firstAttribute="top" secondItem="eDa-rT-BVS" secondAttribute="bottom" constant="44" id="qws-uk-HgT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="wMI-nv-bgV"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aMu-MX-lmd" secondAttribute="trailing" id="A6O-rC-BVF"/>
+                <constraint firstItem="aMu-MX-lmd" firstAttribute="top" secondItem="DQq-W0-i3Q" secondAttribute="top" id="C2T-mb-vN9"/>
+                <constraint firstItem="aMu-MX-lmd" firstAttribute="leading" secondItem="DQq-W0-i3Q" secondAttribute="leading" id="FOA-l9-OeN"/>
+                <constraint firstAttribute="bottom" secondItem="aMu-MX-lmd" secondAttribute="bottom" id="Urq-a6-Phn"/>
+            </constraints>
+            <size key="customSize" width="250" height="282"/>
+            <connections>
+                <outlet property="ageTextField" destination="F7Q-8N-Th1" id="9yv-wk-pqk"/>
+                <outlet property="emailTextField" destination="rgx-gA-lib" id="lsB-bQ-LVE"/>
+                <outlet property="nameTextField" destination="9Rj-nF-kak" id="ExK-zf-8rd"/>
+                <outlet property="passwordTextField" destination="w8B-MQ-aaa" id="WBo-4o-l7d"/>
+            </connections>
+            <point key="canvasLocation" x="300.72463768115944" y="222.65625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Button Color">
+            <color red="0.89803921568627454" green="0.38823529411764707" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

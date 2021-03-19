@@ -12,16 +12,16 @@ struct Task: Decodable {
     let description: String?
     let completed: Bool?
     let owner: String?
-    let createAt: String?
-    let updateAt: String?
+    let createdAt: String?
+    let updatedAt: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case description
         case completed
         case owner
-        case createAt
-        case updateAt
+        case createdAt
+        case updatedAt
     }
 }
 
