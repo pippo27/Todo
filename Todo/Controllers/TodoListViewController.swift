@@ -82,6 +82,21 @@ class TodoListViewController: UIViewController {
             }
         }
     }
+    
+    func deleteTodo(at indexPath: IndexPath) {
+        showLoading()
+        let task = tasks[indexPath.row]
+        service.deleteTask(id: task.id!) { [weak self] result in
+            self?.hideLoading()
+            switch result {
+            case .success:
+                self?.tasks.remove(at: indexPath.row)
+                self?.tableView.deleteRows(at: [indexPath], with: .fade)
+            case .failure(let error):
+                self?.showError(error: error.localizedDescription)
+            }
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
@@ -95,6 +110,12 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskTableViewCell
         cell.task = tasks[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteTodo(at: indexPath)
+        }
     }
 }
 

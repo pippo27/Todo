@@ -170,7 +170,7 @@ class Service {
             case .success(let data):
                 let decoder = JSONDecoder()
                 do {
-                    let response = try decoder.decode(TaskResponse.self, from: data! as! Data)
+                    let response = try decoder.decode(DeleteTaskResponse.self, from: data! as! Data)
                     completion(.success(response.task))
                 } catch {
                     completion(.failure(error))

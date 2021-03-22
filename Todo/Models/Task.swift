@@ -40,6 +40,16 @@ struct CreateTaskResponse: Decodable {
     }
 }
 
+struct DeleteTaskResponse: Decodable {
+    let success: Bool
+    let task: Task
+    
+    enum CodingKeys: String, CodingKey {
+        case success
+        case task = "data"
+    }
+}
+
 struct AllTaskResponse: Decodable {
     let count: Int
     let tasks: [Task]
