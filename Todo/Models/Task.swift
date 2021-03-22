@@ -8,7 +8,7 @@
 import Foundation
 
 struct Task: Decodable {
-    let id: Int?
+    let id: String?
     let description: String?
     let completed: Bool?
     let owner: String?
@@ -30,8 +30,22 @@ struct TaskResponse: Decodable {
     let task: Task
 }
 
+struct CreateTaskResponse: Decodable {
+    let success: Bool
+    let task: Task
+    
+    enum CodingKeys: String, CodingKey {
+        case success
+        case task = "data"
+    }
+}
 
 struct AllTaskResponse: Decodable {
     let count: Int
     let tasks: [Task]
+    
+    enum CodingKeys: String, CodingKey {
+        case count
+        case tasks = "data"
+    }
 }

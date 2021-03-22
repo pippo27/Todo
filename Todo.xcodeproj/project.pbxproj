@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		009450B374BD7AA90923ADE0 /* Pods_Todo_TodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBCA9E8075CC1DCA76D3C2D /* Pods_Todo_TodoUITests.framework */; };
+		1B32120A2605C00400F959E4 /* TodoDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3212092605C00400F959E4 /* TodoDetailTableViewController.swift */; };
 		1B9EC4072604E53100C3C256 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EC4062604E53000C3C256 /* AuthorizationViewController.swift */; };
 		1B9EC40F2604E65700C3C256 /* AuthorizationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EC40E2604E65700C3C256 /* AuthorizationTableViewCell.swift */; };
 		1B9EC42B2604E8C300C3C256 /* FormLoginCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EC4292604E8C300C3C256 /* FormLoginCollectionViewCell.swift */; };
@@ -19,6 +20,10 @@
 		1B9EC47626051FDC00C3C256 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 1B9EC47526051FDC00C3C256 /* JGProgressHUD */; };
 		1B9EC47C260521B000C3C256 /* SDCAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = 1B9EC47B260521B000C3C256 /* SDCAlertView */; };
 		1B9EC4842605332100C3C256 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EC4832605332100C3C256 /* ProfileViewController.swift */; };
+		1B9EC49C26053A7100C3C256 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EC49A26053A7100C3C256 /* TaskTableViewCell.swift */; };
+		1B9EC49D26053A7100C3C256 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9EC49B26053A7100C3C256 /* TaskTableViewCell.xib */; };
+		1B9EC4A326053E6200C3C256 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EC4A226053E6200C3C256 /* TodoListViewController.swift */; };
+		1B9EC4B52605489A00C3C256 /* AddTodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9EC4B42605489A00C3C256 /* AddTodoTableViewController.swift */; };
 		1BF78BCB2604BD9700635901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF78BCA2604BD9700635901 /* AppDelegate.swift */; };
 		1BF78BCD2604BD9700635901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF78BCC2604BD9700635901 /* SceneDelegate.swift */; };
 		1BF78BD22604BD9700635901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF78BD02604BD9700635901 /* Main.storyboard */; };
@@ -57,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B3212092605C00400F959E4 /* TodoDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailTableViewController.swift; sourceTree = "<group>"; };
 		1B9EC4062604E53000C3C256 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		1B9EC40E2604E65700C3C256 /* AuthorizationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationTableViewCell.swift; sourceTree = "<group>"; };
 		1B9EC4292604E8C300C3C256 /* FormLoginCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLoginCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -65,6 +71,10 @@
 		1B9EC4342604E8D800C3C256 /* FormRegisterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormRegisterCollectionViewCell.xib; sourceTree = "<group>"; };
 		1B9EC466260517F600C3C256 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		1B9EC4832605332100C3C256 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1B9EC49A26053A7100C3C256 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		1B9EC49B26053A7100C3C256 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		1B9EC4A226053E6200C3C256 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		1B9EC4B42605489A00C3C256 /* AddTodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoTableViewController.swift; sourceTree = "<group>"; };
 		1BF78BC72604BD9700635901 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF78BCA2604BD9700635901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BF78BCC2604BD9700635901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +142,7 @@
 		1B9EC4042604E4D400C3C256 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				1B9EC48E26053A0A00C3C256 /* Task */,
 				1B9EC4052604E4EF00C3C256 /* Auth */,
 			);
 			path = TableViewCells;
@@ -177,6 +188,15 @@
 				1B9EC466260517F600C3C256 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B9EC48E26053A0A00C3C256 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				1B9EC49A26053A7100C3C256 /* TaskTableViewCell.swift */,
+				1B9EC49B26053A7100C3C256 /* TaskTableViewCell.xib */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 		1BF78BBE2604BD9700635901 = {
@@ -272,6 +292,9 @@
 				1BF78C9A2604E06D00635901 /* LandingViewController.swift */,
 				1B9EC4062604E53000C3C256 /* AuthorizationViewController.swift */,
 				1B9EC4832605332100C3C256 /* ProfileViewController.swift */,
+				1B9EC4A226053E6200C3C256 /* TodoListViewController.swift */,
+				1B9EC4B42605489A00C3C256 /* AddTodoTableViewController.swift */,
+				1B3212092605C00400F959E4 /* TodoDetailTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -433,6 +456,7 @@
 				1BF78BD22604BD9700635901 /* Main.storyboard in Resources */,
 				1B9EC42C2604E8C300C3C256 /* FormLoginCollectionViewCell.xib in Resources */,
 				1B9EC4362604E8D800C3C256 /* FormRegisterCollectionViewCell.xib in Resources */,
+				1B9EC49D26053A7100C3C256 /* TaskTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,18 +550,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9EC4B52605489A00C3C256 /* AddTodoTableViewController.swift in Sources */,
 				1BF78C8F2604D9D600635901 /* Task.swift in Sources */,
 				1BF78C5A2604CF8A00635901 /* Service.swift in Sources */,
 				1BF78BCB2604BD9700635901 /* AppDelegate.swift in Sources */,
 				1B9EC4352604E8D800C3C256 /* FormRegisterCollectionViewCell.swift in Sources */,
+				1B32120A2605C00400F959E4 /* TodoDetailTableViewController.swift in Sources */,
 				1BF78C342604C59E00635901 /* User.swift in Sources */,
 				1BF78C2B2604C46000635901 /* AuthorizationManager.swift in Sources */,
 				1BF78C392604C73600635901 /* AuthData.swift in Sources */,
 				1BF78C222604C3C200635901 /* HttpClient.swift in Sources */,
+				1B9EC49C26053A7100C3C256 /* TaskTableViewCell.swift in Sources */,
 				1B9EC467260517F600C3C256 /* String+Extensions.swift in Sources */,
 				1BF78C9B2604E06D00635901 /* LandingViewController.swift in Sources */,
 				1B9EC42B2604E8C300C3C256 /* FormLoginCollectionViewCell.swift in Sources */,
 				1B9EC40F2604E65700C3C256 /* AuthorizationTableViewCell.swift in Sources */,
+				1B9EC4A326053E6200C3C256 /* TodoListViewController.swift in Sources */,
 				1B9EC4842605332100C3C256 /* ProfileViewController.swift in Sources */,
 				1B9EC4072604E53100C3C256 /* AuthorizationViewController.swift in Sources */,
 				1BF78BCD2604BD9700635901 /* SceneDelegate.swift in Sources */,
