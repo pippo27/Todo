@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "LandingViewController.viewDidAppear(_:):LandingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AuthorizationManager.shared.token">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TodoDetailTableViewController.buttonItemTapped(_:):TodoDetailTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " buttonItem.title ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TodoDetailTableViewController.task.didset:TodoDetailTableViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

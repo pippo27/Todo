@@ -141,18 +141,19 @@ class Service {
         }
     }
     
-    func updateTask(description: String, completed: Bool = false, completion: @escaping(ApiResult<Task>) -> ()) {
+    func updateTask(id: String, description: String, completed: Bool = false, completion: @escaping(ApiResult<Task>) -> ()) {
         let parameters: Parameters = [
             "description": description,
             "completed": completed,
         ]
         
-        httpClient.request(Service.UPDATE_TASK_API, method: .put, parameters: parameters) { result in
+        let url = String(format: Service.UPDATE_TASK_API, arguments: [id])
+        httpClient.request(url, method: .put, parameters: parameters) { result in
             switch result {
             case .success(let data):
                 let decoder = JSONDecoder()
                 do {
-                    let response = try decoder.decode(TaskResponse.self, from: data! as! Data)
+                    let response = try decoder.decode(UpdateTaskResponse.self, from: data! as! Data)
                     completion(.success(response.task))
                 } catch {
                     completion(.failure(error))

@@ -72,7 +72,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="N6a-tS-yos" id="dWX-eT-Q4I"/>
-                        <segue destination="wzj-0h-uuE" kind="show" identifier="EditTodo" id="Fpv-nw-CrY"/>
                         <segue destination="4SA-e8-sHf" kind="show" identifier="TodoDetail" id="vLl-Vy-lWi"/>
                     </connections>
                 </viewController>
@@ -91,7 +90,7 @@
                         <sections>
                             <tableViewSection id="rDQ-05-x1m">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="JZZ-UZ-kxC" style="IBUITableViewCellStyleDefault" id="dq1-FD-GxN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="JZZ-UZ-kxC" style="IBUITableViewCellStyleDefault" id="dq1-FD-GxN">
                                         <rect key="frame" x="0.0" y="18" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dq1-FD-GxN" id="e1b-YH-Sak">
@@ -108,14 +107,14 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="zpr-Fo-prn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="175" id="zpr-Fo-prn">
                                         <rect key="frame" x="0.0" y="61.5" width="414" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zpr-Fo-prn" id="mmo-oD-Ro8">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-Xh-JLN">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-Xh-JLN">
                                                     <rect key="frame" x="20" y="11" width="374" height="153"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
@@ -131,6 +130,39 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="44" id="lgY-to-5uP">
+                                        <rect key="frame" x="0.0" y="236.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lgY-to-5uP" id="buI-08-zzG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eql-Qr-cpn">
+                                                    <rect key="frame" x="20" y="0.0" width="143" height="44"/>
+                                                    <subviews>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gzi-sM-oeH">
+                                                            <rect key="frame" x="0.0" y="6.5" width="51" height="31"/>
+                                                            <connections>
+                                                                <action selector="onSwitchChanged:" destination="4SA-e8-sHf" eventType="valueChanged" id="Lwi-8v-VhE"/>
+                                                            </connections>
+                                                        </switch>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVg-fg-Gfv">
+                                                            <rect key="frame" x="59" y="12" width="84" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eql-Qr-cpn" firstAttribute="leading" secondItem="buI-08-zzG" secondAttribute="leadingMargin" id="45l-8A-Fue"/>
+                                                <constraint firstItem="eql-Qr-cpn" firstAttribute="top" secondItem="buI-08-zzG" secondAttribute="top" id="8z8-Dq-5rR"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eql-Qr-cpn" secondAttribute="trailing" constant="10" id="DVW-qc-wwE"/>
+                                                <constraint firstAttribute="bottom" secondItem="eql-Qr-cpn" secondAttribute="bottom" id="P4M-Xv-g3a"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -140,12 +172,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="c7X-AC-VZL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xl1-Yb-3n2"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Xl1-Yb-3n2">
+                            <connections>
+                                <action selector="buttonItemTapped:" destination="4SA-e8-sHf" id="n0W-W0-Kb4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonItem" destination="Xl1-Yb-3n2" id="VrA-kj-ibi"/>
+                        <outlet property="completedSwitch" destination="gzi-sM-oeH" id="dmv-Hd-jiB"/>
+                        <outlet property="datetimeCell" destination="dq1-FD-GxN" id="SIL-p9-0nh"/>
+                        <outlet property="descriptionTextView" destination="cSJ-Xh-JLN" id="REa-mF-M1y"/>
+                        <segue destination="Uz3-2I-Goi" kind="unwind" identifier="UpdateTask" unwindAction="updateTaskToTodoListViewController:" id="PYm-HE-zhL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUA-BC-bcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Uz3-2I-Goi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2249" y="1497"/>
+            <point key="canvasLocation" x="1596" y="1497"/>
         </scene>
         <!--Add Todo Table View Controller-->
         <scene sceneID="q3J-io-OP7">
@@ -192,7 +236,7 @@
                     <navigationItem key="navigationItem" id="TdP-yF-DFO">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rW7-Ek-aDs">
                             <connections>
-                                <segue destination="wWn-dI-Cmq" kind="unwind" unwindAction="cancelToDiaryViewController:" id="qDv-Tt-KDh"/>
+                                <segue destination="wWn-dI-Cmq" kind="unwind" unwindAction="cancelAddTaskToTodoListViewController:" id="6eg-HU-xrW"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="fEM-5s-NA8">
@@ -330,29 +374,7 @@
             </objects>
             <point key="canvasLocation" x="-155" y="1835"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="05G-Zm-KId">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wzj-0h-uuE" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="5Ll-ki-VtZ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fae-A3-gSk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4SA-e8-sHf" kind="relationship" relationship="rootViewController" id="bXK-Vl-cTK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVG-dJ-Wj3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1488" y="1868"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="vLl-Vy-lWi"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

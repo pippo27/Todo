@@ -16,8 +16,10 @@ class TaskTableViewCell: UITableViewCell {
     var task: Task! {
         didSet {
             descriptionLabel.text = task.description
-            dateLabel.text = ""
-            timeLabel.text = ""
+            dateLabel.text = task.createDate
+            timeLabel.text = task.createTime
+            
+            descriptionLabel.textColor = (task.completed ?? false) ? .green : .orange
         }
     }
     

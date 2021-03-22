@@ -21,16 +21,19 @@ class TodoListViewController: UIViewController {
         fetchTasks()
     }
     
+    // MARK: - Navigation
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        switch identifier {
+        case "TodoDetail":
+            let todoDetailVC = segue.destination as! TodoDetailTableViewController
+            todoDetailVC.task = sender as! Task
+        default:
+            break
+        }
+    }
     
     func registerCell() {
         tableView.register(UINib(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "TaskCell")
@@ -38,17 +41,19 @@ class TodoListViewController: UIViewController {
     
     //MARK: - Unwind Segue Methods
     
-    @IBAction func cancelToDiaryViewController(_ segue: UIStoryboardSegue) {
-        
+    @IBAction func cancelAddTaskToTodoListViewController(_ segue: UIStoryboardSegue) {
     }
     
     @IBAction func addTaskToTodoListViewController(_ segue: UIStoryboardSegue) {
         if let controller = segue.source as? AddTodoTableViewController, let task = controller.task {
-//            tasks.append(task)
-//            tableView.reloadData()
-            
-            // Fetch ข้อมูลใหม่
+            // Fetch ข้อมูลใหม่ จริงๆ จะรอ response มาแล้วเอา data ไปเพิ่มใน array ก็ได้ จะได้ไม่ต้อง fetch ข้อมูลใหม่
             fetchTasks()
+        }
+    }
+    
+    @IBAction func updateTaskToTodoListViewController(_ segue: UIStoryboardSegue) {
+        if let controller = segue.source as? TodoDetailTableViewController, let task = controller.task {
+            updateTodo(task)
         }
     }
     
@@ -97,6 +102,22 @@ class TodoListViewController: UIViewController {
             }
         }
     }
+    
+    func updateTodo(_ task: Task) {
+        let index = tasks.firstIndex { $0.id == task.id }!
+        showLoading()
+        service.updateTask(id: task.id!, description: task.description ?? "", completed: task.completed ?? false) { [weak self] result in
+            self?.hideLoading()
+            switch result {
+            case .success:
+                self?.tasks[index] = task
+                let indexPath = IndexPath(row: index, section: 0)
+                self?.tableView.reloadRows(at: [indexPath], with: .automatic)
+            case .failure(let error):
+                self?.showError(error: error.localizedDescription)
+            }
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
@@ -116,6 +137,10 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
         if editingStyle == .delete {
             deleteTodo(at: indexPath)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "TodoDetail", sender: tasks[indexPath.row])
     }
 }
 

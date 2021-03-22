@@ -26,6 +26,12 @@ class AddTodoTableViewController: UITableViewController {
         textView.resignFirstResponder()
     }
     
+    // MARK: Actions
+    
+    @IBAction func cancelButtonItemTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func saveButtonItemTapped(_ sender: Any) {
         addTask()
     }
